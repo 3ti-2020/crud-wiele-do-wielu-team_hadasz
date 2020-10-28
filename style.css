@@ -9,12 +9,12 @@ body{
     "footer nav nav nav"
     "footer nav nav nav"
     "footer nav nav nav";
-    font-family: sans-serif;
+    font-family: Helvetica;
 }
 
 header{
     grid-area: header;
-    background-color: gray;
+    background-color: rgb(158, 158, 158);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@ header{
 
 footer{
     grid-area: footer;
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(124, 124, 124);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,14 +30,84 @@ footer{
 
 nav{
     grid-area: nav;
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(78, 78, 78);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .table{
-    border: 5px solid black;
+    
     background-color: lightgreen;
+    width: 75%;
+    text-align: center;
+    text-justify: center;
+    border-collapse: collapse;
+    
+    
 }
+
+.text{
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid lightgreen;
+    padding: 5px;
+    margin: 15px;
+    font-size: 20px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
+}
+
+::placeholder{
+    color:lightgreen;
+    opacity: 0.3;
+    
+}
+
+
+.button{
+
+    background: none;
+    border: none;
+    outline: none;
+    background-color: lightgreen;
+    padding: 15px;
+    font-size: 20px;
+    width: 300px;
+    border-radius: 10px;
+
+}
+
+.button:active{
+    background-color: rgb(54, 82, 54);
+    transform: translateY(4px);
+}
+
+.td{
+    border: 1px solid black;
+    margin: 5px;
+    padding: 10px;
+    background-color: rgb(158, 158, 158);
+}
+
+.th{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 25px;
+    background-color: lightgreen;
+    font-size: 25px;
+}
+
+.h{
+    font-size: 50px;
+    color: lightgreen;
+}
+
+
+
+
+
+
 
