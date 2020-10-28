@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kacper Hadasz gr2</title>
     <link rel=stylesheet href="style.css">
 </head>
 <body>
 
 <header></header>
-<footer></footer>
+<footer>
+
+<form class="form" action="insert.php" method="POST">
+    Podaj nazwisko:
+    <input class="text" type="text" name="nazwisko"></br>
+    Podaj tytuł:
+    <input class="text" type="text" name="tytul"></br>
+    <input class="button" type="submit" value="dodaj">
+
+
+
+</footer>
 <nav>
 
 
 <?php
 
-$servername= "localhost";
-$username="root";
-$password="";
-$dbname="książki";
+$servername= "agenerick.com";
+$username="kacper";
+$password="829304kh";
+$dbname="kacper";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
