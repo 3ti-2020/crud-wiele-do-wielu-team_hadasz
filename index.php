@@ -8,15 +8,23 @@
 </head>
 <body>
 
-<header></header>
+<header>
+
+    <h1 class="h">MOJA STRONA</H1>
+
+
+</header>
 <footer>
 
 <form class="form" action="insert.php" method="POST">
-    Podaj nazwisko:
-    <input class="text" type="text" name="nazwisko"></br>
-    Podaj tytuł:
-    <input class="text" type="text" name="tytul"></br>
-    <input class="button" type="submit" value="dodaj">
+    
+    <input class="text" type="text" name="nazwisko" placeholder="nazwisko"></br>
+    
+    <input class="text" type="text" name="tytul" placeholder="tytul"></br>
+
+    
+
+    <input class="button" type="submit" value="Dodaj">
 
 
 
@@ -33,23 +41,26 @@ $dbname="kacper";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-$result = $conn->query("SELECT tytul, name FROM lib_autor, lib_tyt, lib_aut_tyt where lib_aut_tyt.id_autor=lib_autor.id_autor and lib_aut_tyt.id_tytul = lib_tyt.id_tytul  ");
+$result = $conn->query("SELECT id_autor_tytul, name, tytul FROM lib_autor, lib_tyt, lib_aut_tyt where lib_aut_tyt.id_autor=lib_autor.id_autor and lib_aut_tyt.id_tytul = lib_tyt.id_tytul  ");
 
 
 
 echo("<table class='table'>");
-echo("<tr>
-<th>tytul</th>
-<th>nazwisko</th>");
+echo("<tr class='tr'>
+<th class='th'>ID</th>
+<th class='th'>Nazwisko</th>
+<th class='th'>Tytul</th>
+</tr>");
 
 
 
 
 while($row=$result->fetch_assoc()){
     
-    echo("<tr>");
-    echo("<td>".$row['tytul']."</td>");
-    echo("<td>".$row['name']."</td>");
+    echo("<tr class='tr'>");
+    echo("<td class='td'>".$row['id_autor_tytul']."</td>");
+    echo("<td class='td'>".$row['name']."</td>");
+    echo("<td class='td'>".$row['tytul']."</td>");
     echo("</tr>");
 }
     
