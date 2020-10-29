@@ -14,7 +14,24 @@
 
 
 </header>
+
+<main>
+
+<h1 class="ha">Usuń Rekord</h1>
+
+<form class="form" action="delete.php" method="POST">
+
+<input class="text" type="text" name="ID" placeholder="ID"></br>
+
+<input class="button" type="submit" value="Usun">
+    
+
+</main>
+
+
 <footer>
+
+<h1 class="ha">Dodaj Rekord</h1> 
 
 <form class="form" action="insert.php" method="POST">
     
@@ -50,6 +67,7 @@ echo("<tr class='tr'>
 <th class='th'>ID</th>
 <th class='th'>Nazwisko</th>
 <th class='th'>Tytul</th>
+<th class='th'>Usuń</th>
 </tr>");
 
 
@@ -61,6 +79,11 @@ while($row=$result->fetch_assoc()){
     echo("<td class='td'>".$row['id_autor_tytul']."</td>");
     echo("<td class='td'>".$row['name']."</td>");
     echo("<td class='td'>".$row['tytul']."</td>");
+    echo("<td class='td'>  <form class='form' action='delete.php' method='POST'>
+
+    <input class='text' type='hidden' name='ID' value='$row[id_autor_tytul]' placeholder='ID'></br>
+    <input class='buttona' type='submit' value='Usun'> </td>");
+    
     echo("</tr>");
 }
     
