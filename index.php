@@ -15,20 +15,6 @@
 
 </header>
 
-<main>
-
-<h1 class="ha">Usuń Rekord</h1>
-
-<form class="form" action="delete.php" method="POST">
-
-<input class="text" type="text" name="ID" placeholder="ID"></br>
-
-<input class="button" type="submit" value="Usun">
-    
-
-</main>
-
-
 <footer>
 
 <h1 class="ha">Dodaj Rekord</h1> 
@@ -45,7 +31,29 @@
 
 
 
+
 </footer>
+
+<main>
+
+<h1 class="ha">Usuń Rekord</h1>
+
+<form class="form" action="delete.php" method="POST">
+
+<input class="text" type="text" name="ID" placeholder="ID"></br>
+
+<input class="button" type="submit" value="Usun">
+</from>
+    
+
+</main>
+
+
+
+
+
+
+
 <nav>
 
 
