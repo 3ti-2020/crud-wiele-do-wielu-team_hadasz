@@ -28,6 +28,7 @@
     
 
     <input class="button" type="submit" value="Dodaj">
+    </form>
 
 
 
@@ -43,7 +44,7 @@
 <input class="text" type="text" name="ID" placeholder="ID"></br>
 
 <input class="button" type="submit" value="Usun">
-</from>
+</form>
     
 
 </main>
