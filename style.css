@@ -1,23 +1,37 @@
 body{
     display: grid;
-    height: 100vh;
+    height: 120vh;
     margin: auto;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 25% 25% 25% 25%;
     grid-template-areas:
     "header header header header"
-    "footer nav nav nav"
-    "footer nav nav nav"
-    "footer nav nav nav";
+    "footer nav nav main"
+    "footer nav nav main"
+    "footer nav nav main";
     font-family: Helvetica;
+    flex-wrap: wrap;
+}
+
+
+main{
+    grid-area: main;
+    background-color:  rgb(124, 124, 124);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 header{
     grid-area: header;
     background-color: rgb(158, 158, 158);
     display: flex;
+    
     justify-content: center;
     align-items: center;
+    
 }
 
 footer{
@@ -26,14 +40,16 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 nav{
     grid-area: nav;
-    background-color: rgb(78, 78, 78);
+    background-color: rgb(85, 85, 85);
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url();
 }
 
 .table{
@@ -77,10 +93,17 @@ nav{
     font-size: 20px;
     width: 300px;
     border-radius: 10px;
+    transition: 0.3s;
+    height: 50px;
 
 }
 
 .button:active{
+    background-color: rgb(54, 82, 54);
+    transform: translateY(4px);
+}
+
+.buttona:active{
     background-color: rgb(54, 82, 54);
     transform: translateY(4px);
 }
@@ -102,10 +125,20 @@ nav{
 .h{
     font-size: 50px;
     color: lightgreen;
+    animation: 5s myanimation;
+    animation-iteration-count: infinite;
+}
+
+.ha{
+
+    font-size: 50px;
+    color: lightgreen;
+
 }
 
 .tr {
     background-color: rgb(158, 158, 158);
+    transition: 0.3s;
 }
 
 
@@ -117,6 +150,56 @@ nav{
 .tr:hover{
     background-color: rgb(170, 235, 170);
 }
+
+.buttona{
+
+    background: none;
+    border: none;
+    outline: none;
+    background-color: lightgreen;
+    padding: 15px;
+    font-size: 20px;
+    width: 100px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+
+}
+
+.buttona:hover{
+    background-color: rgb(86, 146, 86);
+}
+
+.button:hover{
+ height: 80px;
+ 
+
+}
+
+
+/* @keyframes myanimation{
+
+0%{
+    position: relative; left: 0px; top: 00px; opacity: 1;
+
+}
+
+50%{
+
+     position: absolute; left: 200px; top: 200px; opacity: 1;
+}
+
+100%{
+    position: absolute; left: 200px; top: 200px; opacity: 0
+
+}
+
+
+
+
+
+} */
+
 
 
 
