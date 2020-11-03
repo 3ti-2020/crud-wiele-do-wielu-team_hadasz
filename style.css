@@ -88,6 +88,29 @@ nav{
     
 }
 
+.button_secret{
+    opacity: 0;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: lightgreen;
+    padding: 15px;
+    font-size: 20px;
+    width: 0px;
+    border-radius: 10px;
+    transition: 0.3s;
+    height: 50px;
+    text-decoration: none;
+    color: black;
+    w
+}
+
+.button_secret:hover{
+    opacity: 1;
+    
+    
+
+}
 
 .button{
 
@@ -106,6 +129,8 @@ nav{
     
 
 }
+
+
 
 
 
@@ -187,29 +212,26 @@ nav{
 
 }
 
+.illu{
+    animation: 2s anim infinite;
 
-/* @keyframes myanimation{
+}
+
+
+@keyframes anim{
 
 0%{
-    position: relative; left: 0px; top: 00px; opacity: 1;
+    transform: rotate(360deg);
 
 }
-
-50%{
-
-     position: absolute; left: 200px; top: 200px; opacity: 1;
-}
-
-100%{
-    position: absolute; left: 200px; top: 200px; opacity: 0
-
 }
 
 
 
 
 
-} */
+
+
 
 
 
