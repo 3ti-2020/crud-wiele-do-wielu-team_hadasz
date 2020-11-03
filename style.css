@@ -28,11 +28,17 @@ header{
     grid-area: header;
     background-color: rgb(158, 158, 158);
     display: flex;
-    
     justify-content: center;
     align-items: center;
+   flex-direction: column;
+   
+   
+    
     
 }
+
+
+
 
 footer{
     grid-area: footer;
@@ -95,8 +101,13 @@ nav{
     border-radius: 10px;
     transition: 0.3s;
     height: 50px;
+    text-decoration: none;
+    color: black;
+    
 
 }
+
+
 
 .button:active{
     background-color: rgb(54, 82, 54);
