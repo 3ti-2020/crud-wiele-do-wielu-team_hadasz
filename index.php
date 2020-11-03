@@ -10,7 +10,22 @@
 
 <header>
 
-    <h1 class="h">MOJA STRONA</H1>
+<div class="h1">  <h1 class="h">MOJA STRONA</H1> </div>
+
+<div class="buttons">
+    
+    <a class="button" href="karty.html">Karty</a>
+</div>
+
+
+
+
+
+
+
+
+
+  
 
 
 </header>
@@ -28,9 +43,7 @@
     
 
     <input class="button" type="submit" value="Dodaj">
-    </form>
-
-
+</form>
 
 
 </footer>
