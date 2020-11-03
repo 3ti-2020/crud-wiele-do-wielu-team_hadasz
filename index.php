@@ -10,6 +10,11 @@
 
 <header>
 
+<div class="buttons">
+    
+    <a class="button_secret" href="secret.php">Super Tajna Strona</a>
+</div>
+
 <div class="h1">  <h1 class="h">MOJA STRONA</H1> </div>
 
 <div class="buttons">
@@ -50,13 +55,14 @@
 
 <main>
 
-<h1 class="ha">Usuń Rekord</h1>
+<h1 class="ha">Logowanie</h1>
 
-<form class="form" action="delete.php" method="POST">
+<form class="form" action="logowanie.php" method="POST">
 
-<input class="text" type="text" name="ID" placeholder="ID"></br>
+<input class="text" type="text" name="login" placeholder="Login"></br>
+<input class="text" type="text" name="haslo" placeholder="haslo"></br>
 
-<input class="button" type="submit" value="Usun">
+<input class="button" type="submit" value="zaloguj">
 </form>
     
 
