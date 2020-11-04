@@ -7,12 +7,12 @@
     <link rel=stylesheet href="style.css">
 </head>
 <body>
-
+<?php session_start(); ?>
 <header>
 
 <div class="buttons">
+    <?php if (isset($_SESSION["logowanie"]) && $_SESSION["logowanie"] == 1) echo "<a class='button' href='secret.php'>Super Tajna Strona</a>" ?>
     
-    <a class="button_secret" href="secret.php">Super Tajna Strona</a>
 </div>
 
 <div class="h1">  <h1 class="h">MOJA STRONA</H1> </div>
@@ -56,14 +56,28 @@
 <main>
 
 <h1 class="ha">Logowanie</h1>
+<p class="dane">
+    login: admin </br>
+    hasło: 1234 </p>
 
-<form class="form" action="logowanie.php" method="POST">
+<?php
+if (isset($_SESSION["logowanie"]) && $_SESSION["logowanie"] == -1) {
+    echo "<p class='alert'>Błędne dane logowania</p>";
+    unset($_SESSION["logowanie"]);
+}
+if (isset($_SESSION["logowanie"]) && $_SESSION["logowanie"] == 1) {
+    echo "<div class='buttons'><a class='button' href='logowanie.php?wyloguj=1'>Wyloguj</a></div>";
+}
+else {
+    echo "<form class='form' action='logowanie.php' method='POST'>
+    <input class='text' type='text' name='login' placeholder='Login'></br>
+    <input class='text' type='password' name='haslo' placeholder='haslo'></br>
+    <input class='button' type='submit' value='zaloguj'>
+    </form>";
+}
+?>
 
-<input class="text" type="text" name="login" placeholder="Login"></br>
-<input class="text" type="text" name="haslo" placeholder="haslo"></br>
 
-<input class="button" type="submit" value="zaloguj">
-</form>
     
 
 </main>
