@@ -227,6 +227,15 @@ nav{
 }
 
 
+.dane{
+    font-size: 5px;
+    transition: 0.3s;
+}
+
+.dane:hover{
+    font-size: 20px;
+}
+
 
 
 
