@@ -1,6 +1,6 @@
 body{
     display: grid;
-    height: 120vh;
+    height: 150vh;
     margin: auto;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 25% 25% 25% 25%;
@@ -10,6 +10,7 @@ body{
     "footer nav nav main"
     "footer nav nav main";
     font-family: Helvetica;
+    flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -96,7 +97,7 @@ nav{
     background-color: lightgreen;
     padding: 15px;
     font-size: 20px;
-    width: 0px;
+    width: 300px;
     border-radius: 10px;
     transition: 0.3s;
     height: 50px;
@@ -235,6 +236,18 @@ nav{
 .dane:hover{
     font-size: 20px;
 }
+
+.git{
+    position: relative;
+    top: 15px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+
 
 
 
