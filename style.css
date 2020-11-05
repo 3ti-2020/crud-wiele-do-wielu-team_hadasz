@@ -1,0 +1,264 @@
+body{
+    display: grid;
+    height: 150vh;
+    margin: auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas:
+    "header header header header"
+    "footer nav nav main"
+    "footer nav nav main"
+    "footer nav nav main";
+    font-family: Helvetica;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+
+main{
+    grid-area: main;
+    background-color:  rgb(124, 124, 124);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header{
+    grid-area: header;
+    background-color: rgb(158, 158, 158);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: column;
+   
+   
+    
+    
+}
+
+
+
+
+footer{
+    grid-area: footer;
+    background-color: rgb(124, 124, 124);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav{
+    grid-area: nav;
+    background-color: rgb(85, 85, 85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url();
+}
+
+.table{
+    
+    background-color: lightgreen;
+    width: 75%;
+    text-align: center;
+    text-justify: center;
+    border-collapse: collapse;
+    
+    
+}
+
+.text{
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid lightgreen;
+    padding: 5px;
+    margin: 15px;
+    font-size: 20px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
+}
+
+::placeholder{
+    color:lightgreen;
+    opacity: 0.3;
+    
+}
+
+.button_secret{
+    opacity: 0;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: lightgreen;
+    padding: 15px;
+    font-size: 20px;
+    width: 300px;
+    border-radius: 10px;
+    transition: 0.3s;
+    height: 50px;
+    text-decoration: none;
+    color: black;
+    w
+}
+
+.button_secret:hover{
+    opacity: 1;
+    
+    
+
+}
+
+.button{
+
+    background: none;
+    border: none;
+    outline: none;
+    background-color: lightgreen;
+    padding: 15px;
+    font-size: 20px;
+    width: 300px;
+    border-radius: 10px;
+    transition: 0.3s;
+    height: 50px;
+    text-decoration: none;
+    color: black;
+    
+
+}
+
+
+
+
+
+.button:active{
+    background-color: rgb(54, 82, 54);
+    transform: translateY(4px);
+}
+
+.buttona:active{
+    background-color: rgb(54, 82, 54);
+    transform: translateY(4px);
+}
+
+.td{
+    border: 1px solid black;
+    margin: 5px;
+    padding: 10px;
+}
+
+.th{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 25px;
+    background-color: lightgreen;
+    font-size: 25px;
+}
+
+.h{
+    font-size: 50px;
+    color: lightgreen;
+    animation: 5s myanimation;
+    animation-iteration-count: infinite;
+}
+
+.ha{
+
+    font-size: 50px;
+    color: lightgreen;
+
+}
+
+.tr {
+    background-color: rgb(158, 158, 158);
+    transition: 0.3s;
+}
+
+
+
+.tr:nth-child(odd){
+    background-color:  rgb(112, 112, 112);
+}
+
+.tr:hover{
+    background-color: rgb(170, 235, 170);
+}
+
+.buttona{
+
+    background: none;
+    border: none;
+    outline: none;
+    background-color: lightgreen;
+    padding: 15px;
+    font-size: 20px;
+    width: 100px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+
+}
+
+.buttona:hover{
+    background-color: rgb(86, 146, 86);
+}
+
+.button:hover{
+ height: 80px;
+ 
+
+}
+
+.illu{
+    animation: 2s anim infinite;
+
+}
+
+
+@keyframes anim{
+
+0%{
+    transform: rotate(360deg);
+
+}
+}
+
+
+.dane{
+    font-size: 5px;
+    transition: 0.3s;
+}
+
+.dane:hover{
+    font-size: 20px;
+}
+
+.git{
+    position: relative;
+    top: 15px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
