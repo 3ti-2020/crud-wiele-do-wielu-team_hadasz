@@ -20,7 +20,7 @@
     <a class="button" href="karty.html">Karty</a>
 </div>
 
-<div class="git_pos">
+<div >
     <a class="git" href="https://github.com/3ti-2020/crud-wiele-do-wielu-team_hadasz"><img class="git" src="https://www.flaticon.com/svg/static/icons/svg/25/25231.svg" width="50px"></a>
 </div>
 
