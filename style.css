@@ -1,264 +1,148 @@
-body{
-    display: grid;
-    height: 150vh;
-    margin: auto;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-areas:
-    "header header header header"
-    "footer nav nav main"
-    "footer nav nav main"
-    "footer nav nav main";
-    font-family: Helvetica;
-    flex-wrap: wrap;
-    flex-wrap: wrap;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kacper Hadasz gr2</title>
+    <link rel=stylesheet href="style.css">
+</head>
+<body>
+<?php session_start(); ?>
+<header>
+
+<div class="buttons">
+    <?php if (isset($_SESSION["logowanie"]) && $_SESSION["logowanie"] == 1) echo "<a class='button' href='secret.php'>Super Tajna Strona</a>" ?>
+</div>
+
+<div class="h1">  <h1 class="h">MOJA STRONA</H1> </div>
+
+<div class="buttons">
+    <a class="button" href="karty.html">Karty</a>
+</div>
+
+<div class="git_pos">
+    <a class="git" href="https://github.com/3ti-2020/crud-wiele-do-wielu-team_hadasz"><img class="git" src="https://www.flaticon.com/svg/static/icons/svg/25/25231.svg" width="50px"></a>
+</div>
 
 
-main{
-    grid-area: main;
-    background-color:  rgb(124, 124, 124);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+
+
+
+
+
+
+  
+
+
+</header>
+
+<footer>
+
+<h1 class="ha">Dodaj Rekord</h1> 
+
+<form class="form" action="insert.php" method="POST">
     
-}
-
-header{
-    grid-area: header;
-    background-color: rgb(158, 158, 158);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   flex-direction: column;
-   
-   
+    <input class="text" type="text" name="nazwisko" placeholder="nazwisko"></br>
     
-    
-}
+    <input class="text" type="text" name="tytul" placeholder="tytul"></br>
 
-
-
-
-footer{
-    grid-area: footer;
-    background-color: rgb(124, 124, 124);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-nav{
-    grid-area: nav;
-    background-color: rgb(85, 85, 85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url();
-}
-
-.table{
-    
-    background-color: lightgreen;
-    width: 75%;
-    text-align: center;
-    text-justify: center;
-    border-collapse: collapse;
-    
-    
-}
-
-.text{
-    background: none;
-    border: none;
-    outline: none;
-    border-bottom: 3px solid lightgreen;
-    padding: 5px;
-    margin: 15px;
-    font-size: 20px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none
-}
-
-::placeholder{
-    color:lightgreen;
-    opacity: 0.3;
-    
-}
-
-.button_secret{
-    opacity: 0;
-    background: none;
-    border: none;
-    outline: none;
-    background-color: lightgreen;
-    padding: 15px;
-    font-size: 20px;
-    width: 300px;
-    border-radius: 10px;
-    transition: 0.3s;
-    height: 50px;
-    text-decoration: none;
-    color: black;
-    w
-}
-
-.button_secret:hover{
-    opacity: 1;
-    
     
 
+    <input class="button" type="submit" value="Dodaj">
+</form>
+
+
+</footer>
+
+<main>
+
+<h1 class="ha">Logowanie</h1>
+<p class="dane">
+    login: admin </br>
+    hasło: 1234 </p>
+
+<?php
+if (isset($_SESSION["logowanie"]) && $_SESSION["logowanie"] == -1) {
+    echo "<p class='alert'>Błędne dane logowania</p>";
+    unset($_SESSION["logowanie"]);
 }
+if (isset($_SESSION["logowanie"]) && $_SESSION["logowanie"] == 1) {
+    echo "<div class='buttons'><a class='button' href='logowanie.php?wyloguj=1'>Wyloguj</a></div>";
+}
+else {
+    echo "<form class='form' action='logowanie.php' method='POST'>
+    <input class='text' type='text' name='login' placeholder='Login'></br>
+    <input class='text' type='password' name='haslo' placeholder='haslo'></br>
+    <input class='button' type='submit' value='zaloguj'>
+    </form>";
+}
+?>
 
-.button{
 
-    background: none;
-    border: none;
-    outline: none;
-    background-color: lightgreen;
-    padding: 15px;
-    font-size: 20px;
-    width: 300px;
-    border-radius: 10px;
-    transition: 0.3s;
-    height: 50px;
-    text-decoration: none;
-    color: black;
     
 
+</main>
+
+
+
+
+
+
+
+<nav>
+
+
+<?php
+
+$servername= "agenerick.com";
+$username="kacper";
+$password="829304kh";
+$dbname="kacper";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+$result = $conn->query("SELECT id_autor_tytul, name, tytul FROM lib_autor, lib_tyt, lib_aut_tyt where lib_aut_tyt.id_autor=lib_autor.id_autor and lib_aut_tyt.id_tytul = lib_tyt.id_tytul  ");
+
+
+
+echo("<table class='table'>");
+echo("<tr class='tr'>
+<th class='th'>ID</th>
+<th class='th'>Nazwisko</th>
+<th class='th'>Tytul</th>
+<th class='th'>Usuń</th>
+</tr>");
+
+
+
+
+while($row=$result->fetch_assoc()){
+    
+    echo("<tr class='tr'>");
+    echo("<td class='td'>".$row['id_autor_tytul']."</td>");
+    echo("<td class='td'>".$row['name']."</td>");
+    echo("<td class='td'>".$row['tytul']."</td>");
+    echo("<td class='td'>  <form class='form' action='delete.php' method='POST'>
+
+    <input class='text' type='hidden' name='ID' value='$row[id_autor_tytul]' placeholder='ID'></br>
+    <input class='buttona' type='submit' value='Usun'> </td>");
+    
+    echo("</tr>");
 }
+    
+
+
+echo("</table>");
 
 
 
 
 
-.button:active{
-    background-color: rgb(54, 82, 54);
-    transform: translateY(4px);
-}
-
-.buttona:active{
-    background-color: rgb(54, 82, 54);
-    transform: translateY(4px);
-}
-
-.td{
-    border: 1px solid black;
-    margin: 5px;
-    padding: 10px;
-}
-
-.th{
-    border: 1px solid black;
-    margin: 10px;
-    padding: 25px;
-    background-color: lightgreen;
-    font-size: 25px;
-}
-
-.h{
-    font-size: 50px;
-    color: lightgreen;
-    animation: 5s myanimation;
-    animation-iteration-count: infinite;
-}
-
-.ha{
-
-    font-size: 50px;
-    color: lightgreen;
-
-}
-
-.tr {
-    background-color: rgb(158, 158, 158);
-    transition: 0.3s;
-}
+?>
 
 
-
-.tr:nth-child(odd){
-    background-color:  rgb(112, 112, 112);
-}
-
-.tr:hover{
-    background-color: rgb(170, 235, 170);
-}
-
-.buttona{
-
-    background: none;
-    border: none;
-    outline: none;
-    background-color: lightgreen;
-    padding: 15px;
-    font-size: 20px;
-    width: 100px;
-    border-radius: 10px;
-    transition: 0.3s;
-
-
-}
-
-.buttona:hover{
-    background-color: rgb(86, 146, 86);
-}
-
-.button:hover{
- height: 80px;
- 
-
-}
-
-.illu{
-    animation: 2s anim infinite;
-
-}
-
-
-@keyframes anim{
-
-0%{
-    transform: rotate(360deg);
-
-}
-}
-
-
-.dane{
-    font-size: 5px;
-    transition: 0.3s;
-}
-
-.dane:hover{
-    font-size: 20px;
-}
-
-.git{
-    position: relative;
-    top: 15px;
-    background-color: lightgreen;
-    border-radius: 50%;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</nav>
+    
+</body>
+</html>
