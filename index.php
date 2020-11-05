@@ -12,14 +12,16 @@
 
 <div class="buttons">
     <?php if (isset($_SESSION["logowanie"]) && $_SESSION["logowanie"] == 1) echo "<a class='button' href='secret.php'>Super Tajna Strona</a>" ?>
-    
 </div>
 
 <div class="h1">  <h1 class="h">MOJA STRONA</H1> </div>
 
 <div class="buttons">
-    
     <a class="button" href="karty.html">Karty</a>
+</div>
+
+<div class="git_pos">
+    <a class="git" href="https://github.com/3ti-2020/crud-wiele-do-wielu-team_hadasz"><img class="git" src="https://www.flaticon.com/svg/static/icons/svg/25/25231.svg" width="50px"></a>
 </div>
 
 
