@@ -14,6 +14,7 @@
         else {
             $_SESSION["logowanie"] = -1; // -1 oznacza błędne dane
         }
+        
     }
     if (isset($_GET["wyloguj"])) {
         unset($_SESSION["logowanie"]);
