@@ -12,6 +12,8 @@ if(isset($_SESSION["logowanie"]) && $_SESSION["logowanie"] == 1) $isLoggedIn = t
 else $isLoggedIn = false;?>
 <header>
 
+
+
 <div class="buttons">
     <?php if ($isLoggedIn == true) echo "<a class='button' href='secret.php'>Super Tajna Strona</a>" ?>
 </div>
@@ -37,6 +39,11 @@ else $isLoggedIn = false;?>
 </footer>
 
 <main>
+    <div class="systemocen">
+<h2>oceń moją stronę</h2>
+<p><button class="bttn button1"><img src="https://www.goodfreephotos.com/albums/vector-images/thumbs-up-vector-art.png" width=50px></button><span class="ocena" >0</span><button class="bttn button2"><img src="https://www.goodfreephotos.com/albums/vector-images/thumbs-up-vector-art.png" width=50px></button></p>
+</div>
+
 <?php if($isLoggedIn) {
     echo "<p>Witaj, ".$_SESSION["login"]."</p>";
 } ?>
