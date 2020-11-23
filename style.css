@@ -39,6 +39,50 @@ header{
     
 }
 
+.systemocen{
+    border-top: 3px solid lightgreen;
+    border-bottom: 3px solid lightgreen;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+.ocena{
+    color: lightgreen;
+    font-size: 50px;
+    margin: 20px;
+}
+
+.button2{
+    background: none;
+    border: none;
+    outline: none;
+    position: relative;
+    top: 0px;
+    transition: 0.3s;
+    
+    
+    
+}
+
+.button1{
+    background: none;
+    border: none;
+    outline: none;
+    position: relative;
+    top: 0px;
+    transform: rotateX(180deg);
+    transition: 0.3s;
+    
+}
+
+
+
+
 
 
 
