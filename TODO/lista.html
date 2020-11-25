@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <div class="cnt">
+            <form class="form" id="todoForm">
+                <div class="form-row">
+                   Podaj treść zadania: </br>
+                        <textarea class="form-message" name="todoMessage" id="todoMessage"></textarea>
+                </div> 
+                
+                <div class="form-row">
+                    <button type="submit" class="button form-button">Dodaj</button>
+                </div>
+            </form>
+
+            <section class="list-cnt">
+                <header class="list-header">
+                    <h2 class="list-title">
+                        Lista zadań
+                    </h2>
+
+                    <hr/>
+                    
+                </header>
+
+                <div class="list" id="todoList">
+                </div>
+            </section>
+        </div>
+
+        <template id="elementTemplate">
+            <div class="element-bar">
+                <h3 class="element-date"></h3>
+               
+              <p>  <button class="element-delete" title="Usuń task">
+                   Usuń
+                </button>
+                
+            </div>
+            <div class="element-text">
+                
+            </div>
+        </p>
+            <hr/>
+        </template>
+        
+    </body>
+    <script src="lista.js"></script>
+</html>
