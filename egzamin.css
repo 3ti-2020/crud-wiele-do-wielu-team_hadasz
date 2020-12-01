@@ -32,4 +32,18 @@ main{
 }
 
 
+.odp{
+    visibility:hidden
+    
+}
 
+.odpowiedz{
+    border: 3px solid lightgreen;
+    width: 200px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.odpowiedz:hover .odp{
+    visibility: visible ;
+}
