@@ -1,0 +1,35 @@
+body{
+    background-color: gray;
+    display: grid;
+    height: 100vh;
+    margin: auto 0 ;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: 
+    "main main main main"
+    "main main main main"
+    "header header header header"
+    "header header header header";
+
+}
+
+header{
+    background-color: rgb(126, 126, 126);
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main{
+    background-color: rgb(165, 165, 165);
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
