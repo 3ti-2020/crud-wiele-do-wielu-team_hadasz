@@ -38,7 +38,11 @@ else $isLoggedIn = false;?>
 
 </footer>
 
+
+
 <main>
+<a href="egzamin.html" class="egzamin">Link do pytań</a></br></br></br></br></br></br></br></br></br>
+
     <div class="systemocen">
 <h2>oceń moją stronę</h2>
 <p><button class="bttn button1"><img src="https://www.goodfreephotos.com/albums/vector-images/thumbs-up-vector-art.png" width=50px></button><span class="ocena" >0</span><button class="bttn button2"><img src="https://www.goodfreephotos.com/albums/vector-images/thumbs-up-vector-art.png" width=50px></button></p>
