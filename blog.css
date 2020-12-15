@@ -30,7 +30,7 @@ main{
     align-items: center;
     flex-direction: column;
     display: flex;
-    height: 50vh;
+    height: 80vh;
 }
 
 .post{
