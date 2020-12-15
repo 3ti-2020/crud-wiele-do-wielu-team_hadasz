@@ -41,7 +41,8 @@ else $isLoggedIn = false;?>
 
 
 <main>
-<a href="egzamin.html" class="egzamin">Link do pytań</a></br></br></br></br></br></br></br></br></br>
+<a href="blog.html" class="egzblg blog">Blog</a></br></br></br></br></br></br></br></br></br>
+<a href="egzamin.html" class="egzblg egzamin">Link do pytań</a></br></br></br></br></br></br></br></br></br>
 
     <div class="systemocen">
 <h2>oceń moją stronę</h2>
