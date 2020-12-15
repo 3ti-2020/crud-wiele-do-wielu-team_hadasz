@@ -1,0 +1,29 @@
+body{
+    background-color: gray;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "main main main main"
+    "main main main main";
+    margin: auto 0;
+    font-family: sans-serif;
+}
+
+header{
+    background-color: lightgreen;
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+main{
+    background-color: gray;
+    grid-area: main;
+}
+    
